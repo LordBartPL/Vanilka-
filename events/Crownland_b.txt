@@ -1,0 +1,29 @@
+namespace = crown_land_b
+
+country_event = {
+    id = crown_land_b.1
+    title = crown_land_b.1.t
+    desc = crown_land_b.1.d
+    picture = MERCHANTS_TALKING_eventPicture
+
+    is_triggered_only = yes
+	hidden = yes
+	trigger = {
+			always = yes
+		NOT = { has_country_flag = crown_land_event_b_1}
+		NOT = { is_year = 1445 }
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+    option = {
+        name = crown_land_b.1.a
+      	set_country_flag = has_country_flag = crown_land_event_b_1
+	change_estate_land_share = {
+                            estate = all
+                            share = 25
+                        }
+            }
+          
+}

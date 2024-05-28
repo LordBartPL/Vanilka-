@@ -1,0 +1,481 @@
+country_decisions = {
+
+	bart_adv_decision = {
+		color = { 99  61  131 }
+		potential = {
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		effect = {
+			country_event = {
+		   		id = adv_bart.5
+			    days = 0
+			}
+		}
+		
+	}
+	bart_golden_age_decision = {
+		color = { 249  237  19 }
+		potential = {
+			ai = no
+			NOT = {
+				had_country_flag = {
+				flag = bart_golden_age
+
+				}
+			}
+		}
+		
+		allow = {
+			splendor = 200
+			stability = 1
+			adm_power = 100
+			dip_power = 100
+			mil_power = 10
+		}
+		effect = {
+			set_country_flag = bart_golden_age
+			add_country_modifier = { 
+    			name = bart_golden_age
+    			duration = 18250 
+    			desc = bart_golden_age_desc
+  
+			}
+		}
+		
+	}
+
+bart_splendor_to_points_decision = {
+		color = { 249  237  19 }
+		potential = {
+			ai = no
+			
+		}
+		
+		allow = {
+			splendor = 800
+			
+		}
+		effect = {
+			add_splendor = -800
+			add_mil_power = 100
+			add_dip_power = 100
+			add_adm_power = 100
+		}
+		
+	}
+
+
+bart_impek_is_ruler_decision = {
+		color = { 99  61  131 }
+		potential = {
+			ai = no
+			NOT = { government = republic }
+			
+		}
+		
+		allow = {
+			OR = {
+				AND = {
+					NOT = {
+					ADM = 3
+					DIP = 4
+					MIL = 4
+					}
+				}
+				AND = {
+					NOT = {
+					ADM = 5
+					DIP = 3
+					MIL = 3
+					}
+				}
+				AND = {
+					NOT = {
+					ADM = 3
+					DIP = 5
+					MIL = 3
+					}
+				}
+				AND = {
+					NOT = {
+					ADM = 3
+					DIP = 3
+					MIL = 5
+					}
+				}
+				AND = {
+					NOT = {
+					ADM = 4
+					DIP = 3
+					MIL = 4
+					}
+				}
+				
+			
+				AND = {
+					NOT = {
+					ADM = 4
+					DIP = 4
+					MIL = 3
+					}
+				}
+			}
+		}
+		effect = {
+			change_adm = 1
+			change_dip = 1
+			change_mil = 1
+			add_years_of_income = -0.5
+			add_prestige = -25
+			add_corruption = 1
+			add_legitimacy = -20
+			add_devotion = -20
+			add_horde_unity = -20
+			add_meritocracy = -20
+		}
+		
+	}
+
+	
+
+
+	bart_renovato_the_imperia_d = {
+		color = { 21  111  44 }
+		potential = {
+			ai = no
+			has_country_flag = bart_renovato_d
+		}
+		
+		allow = {
+			num_of_loans = 15
+			NOT = {
+				has_country_modifier = bart_renovato_the_imperia
+			}
+			NOT = {
+				has_country_modifier = bart_renovato_the_coruption
+			}
+			NOT = {
+				has_country_modifier = bart_renovato_the_inflation
+			}
+			NOT = {
+				has_country_modifier = bart_rerenovato_2
+			}
+
+		}
+		effect = {
+			add_country_modifier = { 
+    			name = bart_renovato_the_imperia
+    			duration = -1  
+    			desc = bart_renovato_the_imperia_DESC
+    
+			}
+		}
+		
+	}
+	bart_renovato_the_inflation_d = {
+		color = { 21  111  44 }
+		potential = {
+			ai = no
+				has_country_flag = bart_renovato_d
+			
+		}
+		
+		allow = {
+			inflation = 10
+			NOT = {
+				has_country_modifier = bart_renovato_the_inflation
+			}
+			NOT = {
+				has_country_modifier = bart_renovato_the_imperia
+			}
+			NOT = {
+				has_country_modifier = bart_renovato_the_coruption
+			}
+			NOT = {
+				has_country_modifier = bart_rerenovato
+			}
+		}
+		effect = {
+			add_country_modifier = { 
+    			name = bart_renovato_the_inflation
+    			duration = -1  
+    			desc = bart_renovato_the_inflation_DESC
+    
+			}
+		}
+		
+	}
+	bart_renovato_the_coruption_d = {
+		color = { 21  111  44 }
+		potential = {
+			ai = no
+				has_country_flag = bart_renovato_d
+			
+		}
+		
+		allow = {
+			corruption = 5
+			NOT = {
+				has_country_modifier = bart_renovato_the_coruption
+			}
+			NOT = {
+				has_country_modifier = bart_renovato_the_inflation
+			}
+			NOT = {
+				has_country_modifier = bart_renovato_the_imperia
+			}
+			NOT = {
+				has_country_modifier = bart_rerenovato
+			}
+		}
+		effect = {
+			add_country_modifier = { 
+    			name = bart_renovato_the_coruption
+    			duration = -1  
+    			desc = bart_renovato_the_coruption_DESC
+    
+			}
+		}
+		
+	}
+	bart_show_renovato_d = {
+		color = { 155 128 0 }
+		potential = {
+			ai = no
+			NOT = { has_country_flag = bart_renovato_d }
+		}
+		
+		allow = {
+			ai = no
+		}
+		effect = {
+			set_country_flag = bart_renovato_d
+		}
+	}
+	bart_hide_renovato_d = {
+		color = { 155 128 0 }
+		potential = {
+			ai = no
+			 has_country_flag = bart_renovato_d 
+		}
+		
+		allow = {
+			ai = no
+		}
+		effect = {
+			clr_country_flag = bart_renovato_d
+		}
+		
+
+	}
+
+bart_rerenovato_d = {
+		color = { 200  0  0 }
+		potential = {
+			ai = no
+			OR = {
+
+			has_country_modifier = bart_renovato_the_inflation
+			
+			
+			has_country_modifier = bart_renovato_the_coruption
+			}
+			
+		}
+		
+		allow = {
+			
+			OR = {
+
+			has_country_modifier = bart_renovato_the_inflation
+			
+			
+			has_country_modifier = bart_renovato_the_coruption
+			}
+		}
+		effect = {
+			add_country_modifier = { 
+    			name = bart_rerenovato
+    			duration = 1825  
+    			desc = bart_rerenovato_DESC
+
+    
+			}
+					remove_country_modifier = bart_renovato_the_inflation
+			remove_country_modifier = bart_renovato_the_coruption
+		}
+	}
+bart_rerenovato_d_2 = {
+		color = { 200  0  0 }
+		potential = {
+			ai = no
+	
+
+			has_country_modifier = bart_renovato_the_imperia
+			
+			
+	
+			
+			
+		}
+		
+		allow = {
+			
+			
+
+			has_country_modifier = bart_renovato_the_imperia
+			
+			
+
+			
+		}
+		effect = {
+			add_country_modifier = { 
+    			name = bart_rerenovato_2
+    			duration = 1825  
+    			desc = bart_rerenovato_2_DESC
+
+
+    
+			}
+					remove_country_modifier = bart_renovato_the_imperia
+		}
+}
+Create_trade_centre_b = {
+        color = { 99  61  131 }
+        potential = {
+	ai = no
+        }
+
+        allow = {
+            is_at_war = no
+            any_owned_province = {
+                    area_for_scope_province = {
+                                type = all
+                                NOT = {
+                                    province_has_center_of_trade_of_level = 1
+                                }
+                    }
+                    development = 30
+                    OR = {
+                        has_building = marketplace
+                        has_building = trade_depot
+                        has_building = stock_exchange
+                    }
+                    NOT = {
+                        province_has_center_of_trade_of_level = 1
+                    }
+                    NOT = { continent = north_america }
+                    NOT = { continent = south_america }
+                    NOT = { continent = oceania }
+            }
+
+            treasury = 500
+            dip_power = 50
+        }
+
+        effect = {
+            country_event = { id = cot_b.1 }
+            add_treasury = -500
+            add_dip_power = -50
+        }
+
+    }
+add_merchant_b = {
+        color = { 99  61  131 }
+        potential = {
+	ai = no
+	NOT = { has_country_flag = merchant_got_b }
+        }
+
+        allow = {
+            	is_year = 1500
+		monthly_income = 150
+        }
+
+        effect = {
+            set_country_flag = merchant_got_b
+		add_adm_power = -100
+		add_mil_power = -100
+		add_dip_power = -100
+			add_years_of_income = -0.5
+		add_country_modifier = { 
+   		 name = merchant_plus_b
+    		duration = -1  
+    		desc = merchant_plus_b_DESC_TOOLTIP
+		}
+        }
+
+    }
+	
+############################################################################
+Merge_plc_b = {
+        color = { 0 255 255 }
+        potential = {
+	ai = no
+	is_lesser_in_union = no
+	senior_union_with = POL
+	senior_union_with = LIT
+        }
+
+        allow = {
+            	NOT = { exists = PLC }
+		POL = { NOT = { liberty_desire = 50 } }
+		LIT = { NOT = { liberty_desire = 50 } }
+		is_at_war = no
+		prestige = 75
+        }
+
+        effect = {
+		POL = { inherit = LIT }
+		POL = { change_tag = PLC }
+		POL = { country_event = { id = ideagroups.1 } }
+           	add_dip_power = -100
+		add_years_of_income = -1
+		add_legitimacy = 50
+		add_prestige = -75
+		add_splendor = 50
+		add_stability = 1
+		change_heir_dip = 1
+		change_dip = 1
+		PLC = { add_liberty_desire = -50 }
+		add_historical_friend = PLC
+		add_truce_with = PLC
+        }
+
+    }
+add_fort_b = {
+        color = { 99  61  131 }
+        potential = {
+	ai = no
+		
+		capital_scope = {
+		NOT = {	has_building = fort_15th }
+		}
+	
+		NOT = { is_year = 1455 }
+		NOT = { has_country_flag = fort_b_build_b }
+		NOT = { total_development = 100 }
+        }
+
+        allow = {
+            		NOT = {
+		capital_scope = {
+			has_building = fort_15th
+		}
+	}
+	}
+        effect = {
+		capital_scope = {
+   		add_building = fort_15th
+			}
+		add_treasury = -50
+		set_country_flag = fort_b_build_b
+        }
+
+    }
+}

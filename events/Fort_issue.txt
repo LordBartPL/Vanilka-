@@ -1,0 +1,107 @@
+namespace = fort_mechanic_b
+
+country_event = {
+	id = fort_mechanic_b.5
+	title = fort_mechanic_b.5.t
+	desc = fort_mechanic_b.5.d
+
+	hidden = yes
+
+	trigger = {
+		any_owned_province = {
+			OR = {
+				has_building = fort_15th
+				has_building = fort_16th
+				has_building = fort_17th
+				has_building = fort_18th
+			}
+			any_neighbor_province = {
+				owned_by = ROOT
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+				}
+			}		
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = fort_mechanic_b.5.a
+
+		random_owned_province = {
+			limit = {
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+				}
+
+				any_neighbor_province = {
+					owned_by = ROOT
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+						has_building = fort_17th
+						has_building = fort_18th
+					}
+				}
+			}
+
+			province_event = {
+		   		id = fort_mechanic_b.6
+			    days = 5
+			}
+		}
+	}
+}
+
+province_event = {
+	id = fort_mechanic_b.6
+	title = fort_mechanic_b.6.t
+	desc = fort_mechanic_b.6.d
+
+	picture = SIEGE_eventPicture
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	option = {
+		name = fort_mechanic_b.6.a
+		remove_building = fort_15th
+		remove_building = fort_16th
+		remove_building = fort_17th
+		remove_building = fort_18th
+	}
+
+	option = {
+		name = fort_mechanic_b.6.b
+
+		random_neighbor_province = {
+			limit = {
+				owned_by = ROOT
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+				}
+			}
+			remove_building = fort_15th
+			remove_building = fort_16th
+			remove_building = fort_17th
+			remove_building = fort_18th
+		}
+	}
+}
+
+

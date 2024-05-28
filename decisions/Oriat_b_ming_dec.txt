@@ -1,0 +1,29 @@
+country_decisions = {
+
+	oir_capture = {
+		major = yes
+		potential = {
+			ai = no
+			tag = OIR
+		NOT = { has_country_flag = b_orir_1 }
+		NOT = { has_country_flag = captured_mng_emperor }
+		}
+		
+		allow = {
+		tag = OIR
+			war_score_against = {
+				who = MNG
+				value = 25
+				}
+		}
+		effect = {
+		set_country_flag = b_orir_1
+		country_event = {
+		   		id = flavor_oir.2
+			    days = 0
+			}
+		}
+		
+	}
+	
+}	

@@ -1,0 +1,55 @@
+namespace = cot_b
+
+country_event = {
+    id = cot_b.1
+    title = cot_b.1.t
+    desc = cot_b.1.d
+    picture = MERCHANTS_TALKING_eventPicture
+
+    is_triggered_only = yes
+
+    option = {
+        name = cot_b.1.a
+        if = {
+            limit = {
+                any_owned_province = {
+                    is_state = yes
+                    NOT = {
+                        province_has_center_of_trade_of_level = 1
+                    }
+                    development = 30
+                    OR = {
+                        has_building = marketplace
+                        has_building = trade_depot
+                        has_building = stock_exchange
+                    }
+                }
+            }
+            random_owned_province = {
+                limit = {
+                    area_for_scope_province = {
+                            type = all
+                            NOT = {
+                                province_has_center_of_trade_of_level = 1
+                            }
+                        }
+                    NOT = {
+                        province_has_center_of_trade_of_level = 1
+                    }
+                    is_state = yes
+                    development = 30
+                    OR = {
+                        has_building = marketplace
+                        has_building = trade_depot
+                        has_building = stock_exchange
+                    }
+                    NOT = { continent = north_america }
+                    NOT = { continent = south_america }
+                    NOT = { continent = oceania }
+                }
+                center_of_trade = 1
+                
+            }
+        }
+    }
+}

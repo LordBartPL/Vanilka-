@@ -1,0 +1,63 @@
+country_decisions = {
+
+	bart_dehordyzacja_decisions = {
+		color = { 255 127 39 }
+		potential = {
+			ai = no
+			has_reform = steppe_horde
+		}
+		
+		allow = {
+			has_reform = steppe_horde
+			reform_level = 6
+			government_rank = 3
+			OR = {
+			tag = GLH
+			tag = BUK
+			tag = YUA
+			}
+		}
+		effect = {
+			remove_government_reform = steppe_horde
+			change_government = monarchy
+			add_government_reform = steppe_kingdom_b	
+			add_treasury = -2000
+			add_years_of_income = -1
+			add_dip_power = -100
+			add_mil_power = -100
+			add_adm_power = -100
+			add_country_modifier = { 
+    			name = steppe_legacy_b
+    			duration = -1  
+    			desc = steppe_legacy_b_DESC_TOOLTIP
+			}
+			add_country_modifier = { 
+    			name = steppe_legacy_b_2
+    			duration = 1825
+    			desc = steppe_legacy_b_2_DESC_TOOLTIP
+				}
+			if = {
+			limit = {
+				technology_group = nomad_group
+				OR = {
+					religion_group = muslim
+					secondary_religion = sunni
+					secondary_religion = shiite
+					secondary_religion = ibadi
+				}
+			}
+
+			change_technology_group = muslim
+			change_unit_type = muslim
+			}
+			else = {
+
+			change_technology_group = chinese
+			change_unit_type = chinese
+			}
+			
+		}
+		
+	}
+	
+}	

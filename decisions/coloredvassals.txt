@@ -1,0 +1,114 @@
+country_decisions = {
+	coloredvassals_enable = {
+		potential = {
+			NOT = {
+				has_country_flag = cv_yes
+			}
+		}
+
+		allow = {
+			NOT = {
+				has_country_flag = cv_yes
+			}
+		}
+
+		effect = {
+			ROOT = {
+				set_country_flag = cv_yes
+			}
+			ROOT = {
+				every_subject_country = {
+					limit = {
+						is_colonial_nation = no
+						NOT = {
+							is_subject_of_type = tributary_state
+						}
+					}
+					change_country_color = {
+						country = ROOT
+					}
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	coloredvassals_disable = {
+		potential = {
+			ai = no
+			has_country_flag = cv_yes
+		}
+
+		allow = {
+			has_country_flag = cv_yes
+		}
+
+		effect = {
+			ROOT = {
+				every_subject_country = {
+					restore_country_color = yes
+				}
+				clr_country_flag = cv_yes
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	coloredvassals_enable_trib = {
+		potential = {
+			ai = no
+			NOT = {
+				has_country_flag = cv_yes_trib
+			}
+		}
+		allow = {
+			NOT = {
+				has_country_flag = cv_yes_trib
+			}
+		}
+		effect = {
+			ROOT = {
+				set_country_flag = cv_yes_trib
+			}
+			ROOT = {
+				every_subject_country = {
+					limit = {
+						is_subject_of_type = tributary_state
+					}
+					change_country_color = {
+						country = ROOT
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	coloredvassals_disable_trib = {
+		potential = {
+			ai = no
+			has_country_flag = cv_yes_trib
+		}
+		allow = {
+			has_country_flag = cv_yes_trib
+		}
+		effect = {
+			ROOT = {
+				every_subject_country = {
+					limit = {
+						is_subject_of_type = tributary_state
+					}
+					restore_country_color = yes
+				}
+				clr_country_flag = cv_yes_trib
+			}
+		}
+	}
+}
