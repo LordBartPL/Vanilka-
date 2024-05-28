@@ -1,4 +1,4 @@
-government = theocracy
+government = theocracy #test
 add_government_reform = papacy_reform
 government_rank = 2
 primary_culture = umbrian
