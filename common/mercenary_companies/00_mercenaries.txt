@@ -1,0 +1,191 @@
+merc_1 = {
+    regiments_per_development = 0.04
+    cavalry_cap = 0
+    sprites = { dlc056_mlo_sprite_pack sav_base_sprite_pack westerngfx_sprite_pack }
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
+    min_size = 10
+    max_size = 10
+    manpower_pool = 10
+    no_additional_manpower_from_max_size = yes
+}
+
+
+
+merc_3 = {
+    regiments_per_development = 0.04
+    cavalry_cap = 0
+    sprites = { dlc056_mlo_sprite_pack sav_base_sprite_pack westerngfx_sprite_pack }
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
+    min_size = 10
+    max_size = 10
+    manpower_pool = 10
+    no_additional_manpower_from_max_size = yes
+}
+merc_4 = {
+    regiments_per_development = 0.04
+    cavalry_cap = 0
+    sprites = { dlc056_mlo_sprite_pack sav_base_sprite_pack westerngfx_sprite_pack }
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
+    min_size = 20
+    max_size = 20
+    manpower_pool = 20
+    no_additional_manpower_from_max_size = yes
+}
+merc_5 = {
+    regiments_per_development = 0.04
+    cavalry_cap = 0
+    sprites = { dlc056_mlo_sprite_pack sav_base_sprite_pack westerngfx_sprite_pack }
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
+    min_size = 20
+    max_size = 20
+    manpower_pool = 20
+    no_additional_manpower_from_max_size = yes
+}
+
+
+
+
+merc_10 = {
+    regiments_per_development = 0.04
+    cavalry_cap = 0
+    cavalry_weight = 0
+    sprites = { dlc056_mlo_sprite_pack sav_base_sprite_pack westerngfx_sprite_pack }
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
+    min_size = 50
+    max_size = 50
+    manpower_pool = 50
+    no_additional_manpower_from_max_size = yes
+}
+merc_11 = {
+    regiments_per_development = 0.04
+    cavalry_cap = 100
+    cavalry_weight = 1
+    sprites = { dlc056_mlo_sprite_pack sav_base_sprite_pack westerngfx_sprite_pack }
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
+    min_size = 10
+    max_size = 10
+    manpower_pool = 10
+    no_additional_manpower_from_max_size = yes
+}
+merc_11 = {
+    regiments_per_development = 0.04
+    cavalry_cap = 100
+    cavalry_weight = 1
+    sprites = { dlc056_mlo_sprite_pack sav_base_sprite_pack westerngfx_sprite_pack }
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
+    min_size = 20
+    max_size = 20
+    manpower_pool = 20
+    no_additional_manpower_from_max_size = yes
+}
+merc_12 = {
+    regiments_per_development = 0.04
+    cavalry_cap = 100
+    cavalry_weight = 1
+    sprites = { dlc056_mlo_sprite_pack sav_base_sprite_pack westerngfx_sprite_pack }
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
+    min_size = 20
+    max_size = 20
+    manpower_pool = 20
+    no_additional_manpower_from_max_size = yes
+}
+
+merc_14 = {
+    regiments_per_development = 0.04
+    cavalry_cap = 100
+    cavalry_weight = 1
+    sprites = { dlc056_mlo_sprite_pack sav_base_sprite_pack westerngfx_sprite_pack }
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
+    min_size = 10
+    max_size = 10
+    manpower_pool = 10
+    no_additional_manpower_from_max_size = yes
+}
+
+##############################################################
+merc_ideas_1 = {
+    regiments_per_development = 0.04
+    cavalry_cap = 0
+    sprites = { dlc056_mlo_sprite_pack sav_base_sprite_pack westerngfx_sprite_pack }
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+	full_idea_group = mercenary_ideas
+    }
+    min_size = 25
+    max_size = 25
+    manpower_pool = 50
+    no_additional_manpower_from_max_size = yes
+}
+merc_ideas_2 = {
+    regiments_per_development = 0.04
+    cavalry_cap = 0
+    sprites = { dlc056_mlo_sprite_pack sav_base_sprite_pack westerngfx_sprite_pack }
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+	full_idea_group = mercenary_ideas
+    }
+    min_size = 25
+    max_size = 25
+    manpower_pool = 50
+    no_additional_manpower_from_max_size = yes
+}
+merc_ideas_3 = {
+    regiments_per_development = 0.04
+    cavalry_cap = 0
+    sprites = { dlc056_mlo_sprite_pack sav_base_sprite_pack westerngfx_sprite_pack }
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+	full_idea_group = mercenary_ideas
+    }
+    min_size = 100
+    max_size = 100
+    manpower_pool = 200
+    no_additional_manpower_from_max_size = yes
+}
+
+merc_ideas_4 = {
+    regiments_per_development = 0.04
+    cavalry_cap = 100
+    cavalry_weight = 1
+    sprites = { dlc056_mlo_sprite_pack sav_base_sprite_pack westerngfx_sprite_pack }
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+	full_idea_group = mercenary_ideas
+    }
+    min_size = 25
+    max_size = 25
+    manpower_pool = 50
+    no_additional_manpower_from_max_size = yes
+}
+merc_ideas_5 = {
+    regiments_per_development = 0.04
+    cavalry_cap = 100
+    cavalry_weight = 1
+    sprites = { dlc056_mlo_sprite_pack sav_base_sprite_pack westerngfx_sprite_pack }
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+	full_idea_group = mercenary_ideas
+    }
+    min_size = 50
+    max_size = 50
+    manpower_pool = 100
+    no_additional_manpower_from_max_size = yes
+}

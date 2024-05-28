@@ -1,0 +1,21 @@
+religious_tolerance_state_edict = {
+	potential = {
+		always = yes
+	}
+	
+	allow = {
+		always = yes
+	}
+	
+	modifier = {
+		local_friendly_movement_speed = 0.25
+		local_hostile_movement_speed = 0.15
+		local_hostile_attrition = -3
+	}
+	
+	color = { 255 255 128 }
+	
+	ai_will_do = {
+		factor = 5
+	}
+}

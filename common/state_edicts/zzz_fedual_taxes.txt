@@ -1,0 +1,21 @@
+feudal_taxes_state_edict = {
+	potential = {
+		always = yes
+	}
+	
+	allow = {
+		always = yes
+	}
+	
+	modifier = {
+		local_culture_conversion_cost = -0.15
+		local_culture_conversion_time = -0.1
+		min_local_autonomy = 25
+	}
+	
+	color = { 255 255 128 }
+	
+	ai_will_do = {
+		factor = 5
+	}
+}
